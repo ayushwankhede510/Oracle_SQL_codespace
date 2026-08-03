@@ -1,0 +1,421 @@
+cells:
+  - kind: 2
+    value: |
+      SELECT
+      name
+      FROM
+      custcmers;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      customer_id,
+      name
+      credit_limit
+      FROM
+      customers;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      customer_id,
+      name,
+      address,
+      website,
+      credit_limit
+      FROM
+      customers;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      UPPER( 'This is a string')
+      From
+      what_table;
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM dual;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      UPPER('This is a string ')
+      FROM
+      dual;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      (10 + s)/2
+      FROM
+      dual;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      column_1,
+      column_2,
+      column_3,
+      ...
+      FROM
+      table_nane
+      ORDER BY
+      column_1 [ASC I DESCJ [NULLS FIRST I NULLS LAST],
+      column_1 [ASC I DESC] [NULLS FIRST I NULLS LAST],
+      ...
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      name,
+      address ,
+      credit_limit
+      FROM
+      customers;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      name,
+      address,
+      credit_limit
+      FROM
+      customers
+      ORDER BY
+      name ASC;
+    languageId: oracle-sql
+  - kind: 2
+    value: ORDER BY name ASC
+    languageId: oracle-sql
+  - kind: 2
+    value: ORDER BY name
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      name,
+      address ,
+      credit_limit
+      FROM
+      customers
+      ORDER BY
+      name DESC;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+           first_name,
+           last_name
+      FROM
+           contacts
+      ORDER BY
+          first_name,
+          last_name DESC;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+         name,
+         credi_limit
+      FROM
+         customers
+      ORDER BY
+      2 DESC,
+      1;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+         country_id,
+         city,
+         state
+      FROM
+         locations
+         ORDER BY
+            city ,
+            state;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+          cenmtry_id,
+      city,
+      state
+      FROM
+          locations
+      ORDER BY
+      state ASC NULLS FIRST;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+         country_id ,
+         city,
+         state
+      FROM
+         locatims
+      ORDER BY
+         state
+      ASC NULLS LAST;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+           customer_id,
+           name
+      FROM
+           customers
+      ORDER BY
+      UPPER(name),
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+           order_id
+           customer_id,
+           status,
+           order_date
+      FROM
+         orders
+      ORDER BY
+          order_date DESC;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT DISTINCT colunn_l
+      FROM table;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+          DISTINCT column_1,
+      column_2,
+      column_3
+      FROM
+      table_name;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+         first_name
+      FROM
+         contacts
+      ORDER BY
+          first_name;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT DISTINCT
+         first_name
+      FROM
+        contacts
+      ORDER BY
+      first_name;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+           DISTINCT product_id,
+           quantity
+      FROM
+           ORDER_ITEMS
+      ORDER BY
+          product_id;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+           DISTINCT state
+      FROM
+           locations
+      ORDER BY
+           state NULLS FIRST;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+           select_list
+      FROM
+           table_name
+      WHERE
+           search_condition
+      ORDER BY
+      sort_expression;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+            product_name,
+            description,
+            list_price,
+            category_id
+       From
+          products
+      WHERE
+          product_name = 'Kingstom';
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+            product_name,
+            list_price
+      From
+            products
+      WHERE
+            list_price > 500;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+            product_name,
+            list_price
+      FROM
+            products
+      WHERE
+            list_price > 500
+      AND category_id = 4;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+            product_name
+            list_price
+      FROM
+            products
+      WHERE
+            list_price BETWEEN 650 AND 680
+      ORDER BY
+            list_price;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      list_price BETWEEN 650 AND 680
+      list_price 650 ANO list_price <= 680
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+            product_name,
+            category_id
+      FROM
+           products
+      WHERE
+           category_id IN(1,4)
+      ORDER BY
+           product_name;
+    languageId: oracle-sql
+  - kind: 2
+    value: category_id IN (1, 4)
+    languageId: oracle-sql
+  - kind: 2
+    value: category_id = 1 OR category_id = 4
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+            product_name,
+            list_price
+      FROM
+            products
+      WHERE
+            product_name LIKE 'Asus%'
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+           first_name,
+           last_name
+      FROM
+           employees
+      ORDER BY
+           first_name;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+            Istprc,
+            prdnm
+      FROM
+         long_table_name;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+           first_name forename,
+           last_namæ surnanæ
+      FROM
+      employees;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+           first_name "Forename",
+           last_name "Surname"
+      FROM
+          employees;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+            first_name "First Name",
+            last_name "Fanily Name"
+      FROM
+            employees ;
+    languageId: oracle-sql
+  - kind: 2
+    value: "ORA_00923: FROM keyword not found where expected"
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+           first name  || ' ' || last_name
+      FROM
+         employees;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+          first_name  || ' ' || last_name AS "FUll Name"
+      FROM
+         employees;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+        product_name,
+        list_price - standard_cost AS gross_profit
+      FROM
+          products;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+          product_name,
+          list_price - standard_cost AS gross_profit
+      FROM
+          products
+      ORDER BY
+          gross_profit DESC;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      table_name AS table_alias
+      table_name table_alias
+    languageId: oracle-sql
+  - kind: 2
+    value: table_name. column_name
+    languageId: oracle-sql
+  - kind: 2
+    value: table_alias. column_name
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+        e. first_name employee,
+        m. first_name manager
+      FROM
+         employees e
+      INNER JOIN employees m
+      ON
+        m. employee_id = e. employee_id;
+    languageId: oracle-sql

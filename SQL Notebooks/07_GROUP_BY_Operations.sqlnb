@@ -1,0 +1,166 @@
+cells:
+  - kind: 2
+    value: |
+      SELECT
+      column_list
+      FROM
+      T
+      GROJP BY c1,c2,c3;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      column_list
+      FROM
+      T
+      WHERE
+      condition
+      GROUP BY c1,c2,c3;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      column_list
+      FROM
+      T
+      GROUP BY
+      ROLLUP(c1,c2,c3);
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      status
+      FROM
+      orders
+      GROUP BY
+      status;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      DISTINCT status
+      FROM
+      orders;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      customer_id,
+      COUNT(order_id )
+      FROM
+      orders
+      GROUP BY
+      customer_id
+      ORDER BY
+      customer_id;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      name,
+      COUNNT( order_id )
+      FROM
+      orders
+      INNER JOIN customers
+      USING(customer_id)
+      GROUP BY
+      name
+      ORDER BY
+      nane;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      EXTRACT(YEAR FROM order_date) YEAR,
+      COUNT(order_id )
+      FROM
+      orders
+      GROUP BY
+      EXTRACT(YEAR FROM order_date)
+      ORDER BY
+      YEAR;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      name,
+      COUNT( order_id )
+      FROM orders
+      INNER JOIN customers USING(customer_id)
+      WHERE
+      status = 'Shipped'
+      GROUP BY
+      name
+      ORDER BY
+      nane;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      customer_id,
+      status,
+      SUM(quantity * unit_price ) sales
+      FROM
+      orders
+      INNER JOIN order_items
+      USING (order_id )
+      GROUP BY
+      ROLLUP(
+      customer_id,
+      status
+      );
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      column_list
+      FROM
+      T
+      GROUP BY
+      c1
+      HAVING
+      group_condition ;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      order_id,
+      SUM( unit_price • quantity ) order_value
+      FROM
+      order_items
+      GROUP BY
+      order_id
+      ORDER BY
+      order_value DESC;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      order_id,
+      SUM(unit_price * quantity ) order_value
+      FROM
+      order_items
+      GROUP BY
+      order_id
+      HAVING
+      SUM( unit_price * quantity ) > 1000000
+      ORDER BY
+      order_value DESC;
+    languageId: oracle-sql
+  - kind: 2
+    value: |
+      SELECT
+      order_id,
+      COUNT( item_id ) item_count,
+      SUM( unit_price * quantity ) total
+      FROM
+      order_items
+      GROUP BY
+      order_id
+      HAVING
+      SUM( unit_price * quantity )> 500000 AND
+      COUNT( item_id ) BETWEEN 10 AND 12
+      ORDER BY
+      total DESC,
+      item_count DESC;
+    languageId: oracle-sql
